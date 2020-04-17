@@ -5,21 +5,33 @@ import 'package:flutter/services.dart';
 import 'package:flutter_boost/flutter_boost.dart';
 
 void main() {
-  FlutterBoost.singleton.registerPageBuilders({
-    'penta://firstPage': (pageName, params, _) {
-      print("first flutterPage params:$params");
-      return MyHomePage();
-    },
-    'penta://secondPage': (pageName, params, _) {
-      print("second flutterPage params:$params");
-      return MySecondPage();
-    },
-  });
-
   return runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _MyAppState();
+  }
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    FlutterBoost.singleton.registerPageBuilders({
+      'penta://firstPage': (pageName, params, _) {
+        print("first flutterPage params:$params");
+        return MyHomePage();
+      },
+      'penta://secondPage': (pageName, params, _) {
+        print("second flutterPage params:$params");
+        return MySecondPage();
+      },
+    });
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -72,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text("MyHomePage"),
       ),
       body: Center(
         child: Column(

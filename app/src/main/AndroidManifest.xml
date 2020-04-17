@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.penta.flutterhybridart">
 
     <application
@@ -9,9 +10,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name="com.penta.flutterhybridart.MyFlutterActivity"></activity>
-        <activity android:name="com.penta.flutterhybridart.MainActivity">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,7 +32,7 @@
             android:hardwareAccelerated="true"
             android:theme="@style/Theme.AppCompat"
             android:windowSoftInputMode="adjustResize">
-            <meta-data android:name="io.flutter.embedding.android.SplashScreenDrawable" />
+<!--            <meta-data android:name="io.flutter.embedding.android.SplashScreenDrawable" />-->
 
         </activity>
 
@@ -41,7 +42,7 @@
             android:hardwareAccelerated="true"
             android:theme="@style/Theme.AppCompat"
             android:windowSoftInputMode="adjustResize">
-            <meta-data android:name="io.flutter.embedding.android.SplashScreenDrawable" />
+<!--            <meta-data android:name="io.flutter.embedding.android.SplashScreenDrawable" />-->
 
         </activity>
 
@@ -50,6 +51,9 @@
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
             android:theme="@style/Theme.AppCompat"
             android:windowSoftInputMode="adjustResize" />
+        <meta-data android:name="flutterEmbedding"
+            android:value="2">
+        </meta-data>
     </application>
 
 </manifest>

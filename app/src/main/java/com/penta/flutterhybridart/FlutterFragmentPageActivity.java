@@ -77,7 +77,7 @@ public class FlutterFragmentPageActivity extends AppCompatActivity implements Vi
 
         } else if (mTab2 == v) {
             mTab2.setBackgroundColor(Color.YELLOW);
-            mFragment = new FlutterFragment.NewEngineFragmentBuilder().url("flutterFragment").build();
+            mFragment = new FlutterFragment.NewEngineFragmentBuilder().url("penta://secondPage").build();
         } else if (mTab3 == v) {
             mTab3.setBackgroundColor(Color.YELLOW);
             mFragment = new FlutterFragment.NewEngineFragmentBuilder().url("flutterFragment").build();

@@ -1,12 +1,11 @@
 package com.penta.flutterhybridart;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.View;
-import android.widget.TextView;
 
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
@@ -27,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sRef = new WeakReference<>(this);
 
         setContentView(R.layout.native_page);
+
+
 
         mOpenNative = findViewById(R.id.open_native);
         mOpenFlutter = findViewById(R.id.open_flutter);

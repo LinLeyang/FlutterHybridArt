@@ -1,4 +1,4 @@
-package com.penta.flutterhybrid;
+package com.penta.flutterhybridart;
 
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;

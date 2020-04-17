@@ -1,4 +1,4 @@
-package com.penta.flutterhybrid;
+package com.penta.flutterhybridart;
 
 import android.content.Context;
 import android.os.Bundle;

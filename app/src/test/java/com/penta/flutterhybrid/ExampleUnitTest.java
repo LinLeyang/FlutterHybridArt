@@ -1,4 +1,4 @@
-package com.penta.flutterhybridart;
+package com.penta.flutterhybrid;
 
 import org.junit.Test;
 

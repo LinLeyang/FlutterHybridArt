@@ -4,6 +4,3 @@ evaluate(new File(
   settingsDir,
   'flutter_module/.android/include_flutter.groovy'
 ))
-rootProject.name='FlutterHybridArt'
-
-include ':flutter_module'
